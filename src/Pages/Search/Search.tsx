@@ -52,7 +52,7 @@ const Search = () => {
             <SearchIcon fontSize="large"/>
           </Button>
       </SearchBar>
-      <Tabs value={type} style={{paddingBottom: 5}} indicatorColor="primary" textColor="primary" onChange={( e ,newVal)=>{
+      <Tabs value={type} style={{paddingBottom: 5}} indicatorColor="primary" textColor="primary" onChange={( _e ,newVal)=>{
             setType(newVal);
             setPage(1)
           }}>

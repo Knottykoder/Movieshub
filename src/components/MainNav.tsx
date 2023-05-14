@@ -39,7 +39,7 @@ export const SimpleBottomNavigation = () => {
         sx={{ bgcolor: "#2d313a" }}
         showLabels
         value={value}
-        onChange={(event, newValue) => {
+        onChange={(_event, newValue) => {
           setValue(newValue);
         }}
       >

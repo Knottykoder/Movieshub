@@ -3,7 +3,6 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  Link,
 } from "react-router-dom";
 import Header from "./components/Header/Header";
 import { SimpleBottomNavigation } from "./components/MainNav";
