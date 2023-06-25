@@ -34,8 +34,4 @@ cursor: pointer;
     background-color: white;
     color: black;
 }
-
-@media (max-width: 550px){
-    width: 46%;
-}
 `;

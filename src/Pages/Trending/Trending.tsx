@@ -53,7 +53,7 @@ const Trending = () => {
   return (
     <div>
       <PageTitle>Trending</PageTitle>
-      <TrendingSection className="trending">
+      <TrendingSection>
         {content &&
           content.map((item: ContentDetailsInterface) => (
             <SingleContent
