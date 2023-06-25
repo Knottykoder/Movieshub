@@ -4,21 +4,18 @@ import { useEffect, useState } from "react";
 import {img_500, unavailable, unavailableLandscape } from "../../config/config";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import Carousel from "../Carousel/Carousel";
+import { Content } from "../SingleContent/StyledSingleContent";
 import { ContentModalAbout, ContentModalContainer, ContentModalDescription, ContentModalLandscape, ContentModalPortrait, ContentModalTitle, Tagline } from "./StyledContentModel";
 
 const style = {
   // eslint-disable-next-line @typescript-eslint/prefer-as-const
-  position: "absolute" as "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
   width: "90%",
   height: "80%",
   bgcolor: "#39445a",
   border: "1px solid #282c34",
   borderRadius: 5,
   color: "white",
-  boxShadow: 24,
+  boxShadow: 5,
   p: "8px 8px 24px",
 };
 
@@ -77,19 +74,18 @@ const ContentModal: React.FC<ContentModelInterface> = ({ children, media_type, i
 
   return (
     <>
-      <Button onClick={handleOpen} sx={{ color: "white" }}>
+      <Content onClick={handleOpen}>
         {children}
-      </Button>
+      </Content>
       <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-        sx={{ height: " 100%", width: "100%" }}
+        sx={{display: "flex", justifyContent: "center", alignItems: "center"}}
       >
         <Box sx={style}>
         {content && (
-            <div>
               <ContentModalContainer>
                 <ContentModalPortrait
                   src={
@@ -140,7 +136,6 @@ const ContentModal: React.FC<ContentModelInterface> = ({ children, media_type, i
                   </Button>
                   </ContentModalAbout>
                 </ContentModalContainer>
-            </div>
           )}
         </Box>
       </Modal>

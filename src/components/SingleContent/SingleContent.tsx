@@ -1,6 +1,6 @@
 import { Badge } from "@mui/material";
 import { img_300, unavailable } from "../../config/config";
-import { Content, Poster, SubTitle, Title } from "./StyledSingleContent";
+import {  Poster, SubTitle, Title } from "./StyledSingleContent";
 import ContentModal from "../ContentModal/ContentModal";
 
 export interface SingleContentInterface {
@@ -22,7 +22,6 @@ const SingleContent: React.FC<SingleContentInterface> = ({
 }) => {
   return (
     <ContentModal media_type={media_type} id={id}>
-    <Content>
         <Badge badgeContent={vote_average.toFixed(1)} color={vote_average > 6 ? "primary" : "secondary"}/>
       <Poster
         src={poster ? `${img_300}/${poster}` : unavailable}
@@ -33,7 +32,6 @@ const SingleContent: React.FC<SingleContentInterface> = ({
         {media_type === "tv" ? "TV Series" : "Movie"}
         <SubTitle className="subtitle">{date}</SubTitle>
       </SubTitle>
-    </Content>
     </ContentModal>
   );
 };
